@@ -35,3 +35,14 @@ for ip in net:
 
 # дополнение строки незначащими нулями до 8 символов
 formatted_num = '{:0>8}'.format(num)
+
+# разделение с несколькими разделителями
+# 1 аргумент - любые разделители через |
+import re
+re.split("a | b | c|d|    ", "str to split")
+# разделение по символам A-F
+re.split("[A-F]+", "str to split")
+
+#filter
+arr = ['some', '', 'array', 'with', '', '', 'gapes']
+arr = list(filter(lambda x: x != '', arr)) # removes gapes
