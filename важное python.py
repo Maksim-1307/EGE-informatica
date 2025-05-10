@@ -22,3 +22,16 @@ print(string[::-1])
 
 # перевод из любой в 10
 int('F8', 16)
+
+# округление в меньшую и большую стороны
+from math import ceil, floor
+
+#ip
+from ipaddress import ip_network
+net = ip_network("address/mask")
+c = 0
+for ip in net:
+     if f'{ip:b}'.count('1') % 2 == 0: c += 1
+
+# дополнение строки незначащими нулями до 8 символов
+formatted_num = '{:0>8}'.format(num)
